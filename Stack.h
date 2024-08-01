@@ -13,7 +13,10 @@ public:
   ~Stack() { delete[] arr; }
 
   void push(double);
-  void pull();
+  void pop();
+  bool isfull();
+  bool isempty();
   int Sizeof();
   void print();
+  void Top();
 };

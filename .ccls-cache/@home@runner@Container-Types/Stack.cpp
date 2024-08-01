@@ -3,22 +3,24 @@
 Stack::Stack(int size) {
   this->size = size;
   arr = new double[size];
-  top = 0;
+  top = -1;
 }
 
 Stack::Stack() {
   size = 25;
   arr = new double[size];
-  top = 0;
+  top = -1;
 }
 
 void Stack::push(double num) {
-
-  arr[top] = num;
+  if (isfull()) {
+    std::cout << "Stack is full";
+  }
   top++;
+  arr[top] = num;
 }
 
-void Stack::pull() { top -= 1; }
+void Stack::pop() { top -= 1; }
 
 int Stack::Sizeof() {
   int counter = 0;
@@ -28,9 +30,29 @@ int Stack::Sizeof() {
   return counter;
 }
 
-void Stack::print() {
+bool Stack::isfull() {
+  if (arr == nullptr) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-  for (int i = 0; i < top; i++) {
+bool Stack::isempty() {
+  if (top == -1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+void Stack::print() {
+  if (isempty()) {
+    std::cout << "Stack is empty. ";
+  }
+  for (int i = 0; i <= top; i++) {
     std::cout << arr[i];
   }
 }
+
+void Stack::Top() { std::cout << arr[top]; }
