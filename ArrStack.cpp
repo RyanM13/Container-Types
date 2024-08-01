@@ -1,4 +1,4 @@
-#include "Stack.h"
+#include "ArrStack.h"
 #include <iostream>
 Stack::Stack(int size) {
   this->size = size;
@@ -31,7 +31,7 @@ int Stack::Sizeof() {
 }
 
 bool Stack::isfull() {
-  if (arr == nullptr) {
+  if (top >= size - 1) {
     return true;
   } else {
     return false;
@@ -50,6 +50,7 @@ void Stack::print() {
   if (isempty()) {
     std::cout << "Stack is empty. ";
   }
+
   for (int i = 0; i <= top; i++) {
     std::cout << arr[i];
   }

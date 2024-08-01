@@ -1,4 +1,4 @@
-#include "Stack.h"
+#include "ArrStack.h"
 #include <iostream>
 Stack::Stack(int size) {
   this->size = size;

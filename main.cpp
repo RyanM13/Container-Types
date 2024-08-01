@@ -2,6 +2,7 @@
 #include <iostream>
 
 void ArrStack(Stack &);
+void LLStack(Stack &);
 
 int main() {
   Stack numbers;
@@ -19,3 +20,5 @@ void ArrStack(Stack &numbers) {
   //  numbers.push(26);
   std::cout << numbers.Sizeof();
 }
+
+void LLStack(Stack &numbers) {}
