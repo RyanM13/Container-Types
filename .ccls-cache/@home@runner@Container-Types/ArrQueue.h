@@ -1,3 +1,4 @@
+#include <iostream>
 
 class Queue {
 private:
@@ -9,6 +10,7 @@ private:
 public:
   Queue(int);
   Queue();
+  ~Queue() { delete[] arr; }
 
   void push(double);
   double pop();
