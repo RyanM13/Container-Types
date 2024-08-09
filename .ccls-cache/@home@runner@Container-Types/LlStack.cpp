@@ -15,6 +15,10 @@ LlStack::LlStack(int num) {
   newNode->data = num;
 }
 
-void LlStack::push(int num) {
-  
+void LlStack::push(node *newNode, int num) { newNode->data = num; }
+
+void LlStack::pop(node *newNode) {
+
+  node *poppednode = new node();
+  poppednode = newNode->head;
 }
